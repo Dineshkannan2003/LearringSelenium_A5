@@ -27,11 +27,15 @@ public class Handling_hiddenelement {
 		
 		WebElement ele1 = driver.findElement(By.xpath("//ul[@class='top-menu']//a[contains(text(),'Computers')]"));
 		
+		actionobj.contextClick(ele1);
+		
 		actionobj.moveToElement(ele1).perform();
 		
 		WebElement ele2 = driver.findElement(By.xpath("//ul[@class='top-menu']//a[contains(text(),'Desktops')]"));
 		
 		actionobj.click(ele2).perform();
+		
+		
 		
 		
 

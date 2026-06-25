@@ -95,7 +95,7 @@ public class task {
 
 	  
 		
-
+        driver.quit();
 		    
 	    
 	 

@@ -27,7 +27,7 @@ public class Handling_hiddenelement {
 		
 		WebElement ele1 = driver.findElement(By.xpath("//ul[@class='top-menu']//a[contains(text(),'Computers')]"));
 		
-		actionobj.contextClick(ele1);
+		//actionobj.contextClick(ele1);
 		
 		actionobj.moveToElement(ele1).perform();
 		
@@ -35,6 +35,9 @@ public class Handling_hiddenelement {
 		
 		actionobj.click(ele2).perform();
 		
+		WebElement ele3 = driver.findElement(By.xpath("//a[text()='Build your own cheap computer']"));
+		
+		actionobj.doubleClick(ele3).perform();
 		
 		
 		

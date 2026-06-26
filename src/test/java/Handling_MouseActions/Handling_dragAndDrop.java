@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.WheelInput.ScrollOrigin;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Handling_dragAndDrop {
 	
@@ -19,16 +21,25 @@ public class Handling_dragAndDrop {
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20l));
 		
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+		
 		Actions actionobj=new Actions(driver);
 
 		
-		driver.get("https://vinothqaacademy.com/mouse-event/");
+		driver.get("https://vinothqaacademy.com/");
 		
 		
-		/*
+		
 		WebElement demo = driver.findElement(By.xpath("(//a[text()='Demo Sites'])[2]"));
 		actionobj.moveToElement(demo).perform();
-		*/
+		
+		WebElement practice = driver.findElement(By.xpath("(//a[text()='Practice Automation'])[2]"));
+		actionobj.moveToElement(practice).perform();
+		
+		WebElement mouse = driver.findElement(By.xpath("(//a[text()='Mouse Event'])[2]"));
+		wait.until(ExpectedConditions.elementToBeClickable(mouse));
+		actionobj.moveToElement(mouse).click().perform();
+		
 		
 		
 		
